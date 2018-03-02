@@ -1,0 +1,146 @@
+﻿<Window x:Class="U1_04CareersJosh.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:U1_04CareersJosh"
+        mc:Ignorable="d"
+        Title="/\/ / /\/ _/ /|" Height="350" Width="525">
+    <Canvas>
+        <Button x:Name="Next_Page"
+                Content="Next Page" Canvas.Left="459" Canvas.Top="299"
+                Click="Next_Page_Activated"/>
+        <Button x:Name="Last_Page"
+                Content="Last Page" Canvas.Top="299"
+                Click="Last_Page_Activated"
+                />
+
+        <TextBlock x:Name="Page_Identifier"
+                       Text="Page" FontSize="20" Canvas.Left="425" Canvas.Top="14"
+            />
+
+        <Grid x:Name="Page_1" Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="294*"/>
+                <ColumnDefinition Width="65*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="University of Waterloo - Online Informatory" 
+                     RenderTransformOrigin="0.5,0.5" 
+                     TextAlignment="Center"
+                     Height="20" Margin="-1,142,0.27,137">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="100" Y="159"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Image x:Name="Image"
+                   Height="250"
+                   Source="https://uwaterloo.ca/waterloo-guelph-physics-graduate-studies/sites/ca.waterloo-guelph-physics-graduate-studies/files/uploads/images/universityofwaterloo_logo_vert_rgb_1.jpg" Grid.ColumnSpan="3" Margin="64,39,-54,10"
+                   />
+        </Grid>
+        <Grid x:Name="Page_2" Visibility="Hidden" Height="41" Width="54">
+            <Button x:Name="btn_Basic_Info"
+                    Content="Basic Info"
+                    Click="Basic_Info_Active" 
+                    Margin="5,52,-204,-52"
+                    Background="White" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold"
+                    />
+            <Button x:Name="btn_PreReq"
+                    Content="Pre-Requisites"
+                    Click="PreReq_Active" 
+                    Margin="258,52,-457,-52"
+                    Background="White" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold"
+                    />
+            <Button x:Name="btn_Reset"
+                    Content="Reset"
+                    Click="Reset_Active" 
+                    Margin="222,98,-239,-88" 
+                    Background="White" FontSize="16" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+            <Image x:Name="h_Image"
+                   Source="http://cacb.wpengine.com/wp-content/uploads/2015/05/waterloo.jpg"
+                   Width="300" Margin="106,11,-352,-11"
+                   />
+
+            <TextBlock x:Name="Basic_Info"
+                       Visibility="Hidden"
+                       Text=" OUAC code - 101 &#x0a;
+Total Students Enrolled at University: 36,670 &#x0a;
+The main campus is on 404 hectares of land in Uptown Waterloo, adjacent to Waterloo Park. &#x0a;
+Approximate Tuition: $14,557 &#x0a;
+Books, and Supplies: $2,000 &#x0a;
+University Wide Acceptance Rate: 53%" HorizontalAlignment="Center" Width="506" Margin="0,147,-457,-249"
+                       />
+            <TextBlock x:Name="PreReq" Margin="0,147,-457,-249"
+                       Visibility="Hidden"
+                       Text=" Ontario students need 6 Grade 12 U and or M courses including:&#x0a;
+Advanced Functions&#x0a;
+Calculus and Vectors&#x0a;
+Any Grade 12 U English&#x0a;
+One Other 4U course&#x0a;
+Recommended: Grade 11 U Introduction to computer science."
+                       />
+        </Grid>
+        <Grid x:Name="Page_3" Visibility="Hidden" Height="41" Width="54">
+            <Button x:Name="btn_FirstCourses"
+                    Content="First Year Courses"
+                    Click="First_Year_Active" 
+                    Margin="5,52,-204,-52"
+                    Background="White" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold"
+                    />
+            <Button x:Name="btn_PotCareers"
+                    Content="Potential Careers"
+                    Click="PotCareers_Active" 
+                    Margin="258,52,-457,-52"
+                    Background="White" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold"
+                    />
+            <Button x:Name="btn_Reset2"
+                    Content="Reset"
+                    Click="Reset2_Active" 
+                    Margin="222,98,-239,-88" 
+                    Background="White" FontSize="16" FontFamily="Times New Roman" FontWeight="Bold"/>
+
+            <Image x:Name="h2_Image"
+                   Source="http://cacb.wpengine.com/wp-content/uploads/2015/05/waterloo.jpg"
+                   Width="300" Margin="106,11,-352,-11"
+                   />
+
+            <TextBlock x:Name="FirstCourses"
+                       Visibility="Hidden"
+                       Text="September to December: 
+CS 135 - Designing Functional Programs, &#x0a;
+MATH 135 - Algebra,
+MATH 137 - Calculus 1 &#x0a;
+1 communication skills course, 
+1 elective &#x0a;
+&#x0a;
+January to April:
+CS 136 - Algorithm Design and Data Abstraction, &#x0a;
+MATH 136 - Linear Algebra 1,
+MATH 138 - Calculus 2, &#x0a;
+2 electives
+"
+                       HorizontalAlignment="Center" Width="506" Margin="0,147,-457,-249"
+                />
+            <TextBlock x:Name="PotCareers"
+                       Visibility="Hidden"
+                       Text="Risk Modelling Analyst, TD Bank &#x0a;
+Business Analyst, Canadian Tire Corporation &#x0a;
+Agile Engineer, Pivotal Labs &#x0a;
+Developer Advocate, Google &#x0a;
+Product Manager, Dropbox &#x0a;
+Program Analyst, Ministry of Health and Long-Term Care &#x0a;
+Programmer, Harry Rosen Inc. &#x0a;
+Quality Assurance Analyst, IBM Canada &#x0a;
+Lead Developer, BMO Bank of Montreal
+"
+                       HorizontalAlignment="Center" Width="506" Margin="0,147,-457,-249"
+                />
+        </Grid>
+    </Canvas>
+</Window>
